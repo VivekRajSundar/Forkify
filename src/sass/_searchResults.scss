@@ -2,6 +2,13 @@
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
+
+  //code
+  @media only screen and (max-width: $bp-medium-low) {
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+  }
 }
 
 .results {

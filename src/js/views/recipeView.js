@@ -30,10 +30,17 @@ class RecipeView extends View {
 
   _generateMarkup() {
     return `
+    
     <figure class="recipe__fig">
+      <button class="btn--round invisible">
+        <svg class="">
+          <use href="${icons}#icon-arrow-left"></use>
+        </svg>
+      </button>
       <img src="${this._data.image}" alt="${
       this._data.title
     }" class="recipe__img" />
+    
       <h1 class="recipe__title">
         <span>${this._data.title}</span>
       </h1>

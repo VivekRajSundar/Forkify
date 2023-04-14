@@ -13,6 +13,7 @@ $gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
 
 $bp-large: 78.15em; // 1250px
 $bp-medium: 61.25em; // 980px
+$bp-medium-low: 48.5em;
 $bp-small: 37.5em; // 600px
 $bp-smallest: 31.25em; // 500px
 
@@ -67,5 +68,13 @@ body {
     max-width: 100%;
     margin: 0;
     border-radius: 0;
+  }
+
+  @media only screen and (max-width: $bp-medium-low) {
+    grid-template-rows: 10rem auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'head '
+      'recipe ';
   }
 }

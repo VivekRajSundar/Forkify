@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: space-between;
 
+  @media only screen and (max-width: $bp-medium-low) {
+    justify-content: space-evenly;
+  }
+
   &__logo {
     margin-left: 4rem;
     height: 4.6rem;
@@ -19,6 +23,12 @@
   align-items: center;
   padding-left: 3rem;
   transition: all 0.3s;
+
+  @media only screen and (max-width: $bp-medium-low) {
+    &__title {
+      display: none;
+    }
+  }
 
   &:focus-within {
     transform: translateY(-2px);
@@ -60,10 +70,20 @@
   align-self: stretch;
   margin-right: 2.5rem;
 
+  @media only screen and (max-width: $bp-medium-low) {
+    &__title {
+      display: none;
+    }
+  }
+
   &__list {
     list-style: none;
     display: flex;
     height: 100%;
+
+    @media only screen and (max-width: $bp-medium-low) {
+      justify-content: space-between;
+    }
   }
 
   &__item {
@@ -92,6 +112,11 @@
       fill: $color-primary;
       margin-right: 0.7rem;
       transform: translateY(-1px);
+
+      @media only screen and (max-width: $bp-medium-low) {
+        height: 3rem;
+        width: 3rem;
+      }
     }
 
     &:focus {
