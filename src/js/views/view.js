@@ -51,6 +51,9 @@ export default class View {
     });
   }
 
+  /**
+   * Render the spinner to the screen
+   */
   renderSpinner() {
     const markup = `
       <div class="spinner">
@@ -63,6 +66,11 @@ export default class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
+  /**
+   * Renders the error message to the screen
+   * @param {String }[message = this._errorMessage] message Represents the error message
+   * @returns {undefined} returns nothing, just adds error message to its parent element
+   */
   renderError(message = this._errorMessage) {
     const markup = `
       <div class="error">
@@ -79,6 +87,11 @@ export default class View {
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
+  /**
+   * Renders the message to the screen
+   * @param {String}[message = this._message] represents the message
+   * @returns {undefined} returns nothing, just adds message to its parent element
+   */
   renderMessage(message = this._message) {
     const markup = `
       <div class="message">
