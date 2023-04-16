@@ -1,6 +1,12 @@
 .recipe {
   background-color: $color-grey-light-1;
 
+  @media only screen and (max-width: $bp-medium-low) {
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+  }
+
   ///////////
   // FIGURE
   &__fig {

@@ -213,5 +213,7 @@
 }
 
 .invisible {
+  visibility: hidden;
+  overflow: hidden;
   display: none;
 }
